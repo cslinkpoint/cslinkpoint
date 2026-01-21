@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CS LinkPoint | NATO infrastructure & fuel pipeline consultancy</title>
+  <meta name="description" content="CS LinkPoint supports governments and industry to plan, develop and fund defence infrastructure projects — with deep expertise in NATO common funding and fuel pipeline systems." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CS LinkPoint" />
+  <meta property="og:description" content="NATO infrastructure & fuel pipeline consultancy" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a33;
+      --muted:#a9b3c7;
+      --text:#eef2ff;
+      --accent:#7dd3fc;
+      --accent2:#a78bfa;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1000px 600px at 20% 10%, rgba(125,211,252,.18), transparent 60%),
+        radial-gradient(900px 600px at 80% 25%, rgba(167,139,250,.16), transparent 55%),
+        linear-gradient(180deg, #070b14 0%, var(--bg) 25%, #060a12 100%);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px; margin:0 auto; padding:28px 20px 80px}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:40;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.55);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:14px}
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(125,211,252,.95), rgba(167,139,250,.95));
+      box-shadow: 0 10px 28px rgba(125,211,252,.18);
+      display:grid; place-items:center;
+      font-weight:800; color:#08101f;
+      letter-spacing:.6px;
+    }
+    .logoImg{height:38px; width:auto; border-radius:12px; display:block}
+    .brand strong{font-size:15px; letter-spacing:.4px}
+    .brand span{display:block; font-size:12px; color:var(--muted)}
+
+    .links{display:flex; align-items:center; gap:14px; flex-wrap:wrap}
+    .links a{font-size:13px; color:rgba(238,242,255,.86); text-decoration:none; padding:8px 10px; border-radius:12px}
+    .links a:hover{background:rgba(255,255,255,.06)}
+
+    .cta{
+      text-decoration:none;
+      font-weight:650;
+      font-size:13px;
+      padding:9px 12px;
+      border-radius:14px;
+      background: linear-gradient(135deg, rgba(125,211,252,.18), rgba(167,139,250,.18));
+      border:1px solid rgba(255,255,255,.14);
+    }
+    .cta:hover{filter:brightness(1.08)}
+
+    /* Hero */
+    .hero{padding:46px 0 16px}
+    .grid{display:grid; grid-template-columns:1.15fr .85fr; gap:18px}
+    @media (max-width: 900px){.grid{grid-template-columns:1fr;}}
+
+    .heroCard{
+      background: linear-gradient(180deg, rgba(15,26,51,.85), rgba(15,26,51,.58));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:26px;
+      overflow:hidden;
+      position:relative;
+    }
+    .tag{
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:12px;
+      color:rgba(238,242,255,.9);
+      margin-bottom:14px;
+    }
+    .dot{width:8px; height:8px; border-radius:99px; background: var(--accent)}
+    h1{font-size:44px; line-height:1.05; margin:0 0 10px; letter-spacing:-.6px}
+    @media (max-width: 520px){h1{font-size:36px}}
+    .lead{color:rgba(238,242,255,.86); font-size:16px; margin:0 0 18px}
+    .quick{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .pill{
+      font-size:12px; color:rgba(238,242,255,.88);
+      border:1px solid rgba(255,255,255,.12);
+      padding:8px 10px; border-radius:999px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .side{
+      display:grid; gap:14px;
+    }
+    .card{
+      background: rgba(15,26,51,.62);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+    }
+    .card h3{margin:0 0 8px; font-size:14px; letter-spacing:.3px}
+    .muted{color:var(--muted)}
+    .kpi{display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; margin-top:12px}
+    .kpi div{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.10); padding:10px 12px; border-radius:14px}
+    .kpi strong{display:block; font-size:16px}
+    .kpi span{font-size:11px; color:var(--muted)}
+
+    /* Sections */
+    section{margin-top:22px}
+    .sectionTitle{display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin:0 0 10px}
+    .sectionTitle h2{margin:0; font-size:18px; letter-spacing:.2px}
+    .sectionTitle p{margin:0; color:var(--muted); font-size:13px}
+
+    .tiles{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
+    @media (max-width: 900px){.tiles{grid-template-columns:1fr}}
+
+    .tile{background:rgba(15,26,51,.62); border:1px solid var(--line); border-radius: var(--radius); padding:18px}
+    .tile h3{margin:0 0 8px; font-size:14px}
+    .tile ul{margin:10px 0 0; padding-left:18px; color:rgba(238,242,255,.86)}
+    .tile li{margin:6px 0}
+
+    .process{display:grid; grid-template-columns:repeat(4, 1fr); gap:12px}
+    @media (max-width: 900px){.process{grid-template-columns:1fr}}
+    .step{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.10); border-radius: 16px; padding:14px}
+    .step strong{display:block; margin-bottom:6px}
+    .step span{color:var(--muted); font-size:13px}
+
+    .about{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+    @media (max-width: 900px){.about{grid-template-columns:1fr}}
+
+    .badgeRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .badge{font-size:12px; border:1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.04); padding:8px 10px; border-radius:999px}
+
+    /* Footer + form */
+    footer{margin-top:30px; padding-top:22px; border-top:1px solid var(--line)}
+    form{display:grid; gap:10px}
+    .row2{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    @media (max-width: 700px){.row2{grid-template-columns:1fr}}
+    input, textarea{
+      width:100%;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: 14px;
+      padding:12px 12px;
+      color:var(--text);
+      font-size:14px;
+      outline:none;
+    }
+    input:focus, textarea:focus{border-color: rgba(125,211,252,.55); box-shadow: 0 0 0 4px rgba(125,211,252,.12)}
+    textarea{min-height:120px; resize:vertical}
+    .btn{
+      cursor:pointer;
+      border:1px solid rgba(255,255,255,.16);
+      background: linear-gradient(135deg, rgba(125,211,252,.18), rgba(167,139,250,.18));
+      color:var(--text);
+      padding:11px 14px;
+      border-radius: 14px;
+      font-weight:650;
+      font-size:14px;
+      width:max-content;
+    }
+    .btn:hover{filter:brightness(1.08)}
+    .small{font-size:12px; color:var(--muted)}
+
+    .sr{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#top">
+        <img class="logoImg" src="data:image/png;base64,"+b64+"" alt="CS LinkPoint logo" />
+        <div>
+          <strong>CS LinkPoint</strong>
+          <span>NATO infrastructure & fuel pipeline consultancy</span>
+        </div>
+      </a>
+      <div class="links">
+        <a href="#services">Services</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div class="grid">
+        <div class="heroCard">
+          <div class="tag"><span class="dot"></span> Turning NATO policy & common funding into deliverable infrastructure</div>
+          <h1>Plan. Fund. Deliver.<br/>Defence infrastructure that works.</h1>
+          <p class="lead">
+            CS LinkPoint supports government entities and associated companies in developing infrastructure projects aligned with NATO requirements —
+            with a particular focus on <strong>fuel pipeline systems, storage facilities</strong>, and <strong>airfields</strong>.
+          </p>
+          <div class="quick" aria-label="Highlights">
+            <div class="pill">NATO common funding (NSIP)</div>
+            <div class="pill">Fuel pipelines & depots</div>
+            <div class="pill">Airfields & dual‑use</div>
+            <div class="pill">Planning • eligibility • delivery</div>
+          </div>
+        </div>
+
+        <div class="side">
+          <div class="card">
+            <h3>Where we help most</h3>
+            <p class="muted" style="margin:0">
+              Early project shaping, eligibility screening, and preparing decision‑ready packages for NATO / national stakeholders.
+            </p>
+            <div class="kpi" role="list" aria-label="Experience">
+              <div role="listitem"><strong>25 yrs</strong><span>NATO experience</span></div>
+              <div role="listitem"><strong>12 yrs</strong><span>Infrastructure screening</span></div>
+              <div role="listitem"><strong>13 yrs</strong><span>CEPS Plans & Policy</span></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Based in</h3>
+            <p class="muted" style="margin:0">
+              Cascais, Portugal • Working across Europe
+            </p>
+            <div class="badgeRow" aria-label="Focus areas">
+              <span class="badge">Fuel logistics resilience</span>
+              <span class="badge">Pipeline integrity</span>
+              <span class="badge">Stakeholder alignment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="sectionTitle">
+        <h2>Services</h2>
+        <p>Flexible support — from a quick review to end‑to‑end advisory.</p>
+      </div>
+      <div class="tiles">
+        <div class="tile">
+          <h3>Project shaping & eligibility</h3>
+          <p class="muted" style="margin:0">
+            Define a compliant scope, map stakeholders, and align technical solutions with NATO / national criteria.
+          </p>
+          <ul>
+            <li>Requirements clarification & options analysis</li>
+            <li>Common funding eligibility & procedure guidance</li>
+            <li>Risk review (scope, schedule, affordability)</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <h3>Fuel pipeline systems & storage</h3>
+          <p class="muted" style="margin:0">
+            Support for new capabilities and upgrades across pipelines, depots, and distribution nodes.
+          </p>
+          <ul>
+            <li>Concepts for resilience, redundancy & surge</li>
+            <li>Integrity / repair / recovery capability planning</li>
+            <li>Interface with civil networks & dual‑use infrastructure</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <h3>Airfields & other defence infrastructure</h3>
+          <p class="muted" style="margin:0">
+            Planning and packaging upgrades for air operations support and enabling infrastructure.
+          </p>
+          <ul>
+            <li>Airfield fuel systems, aprons, utilities & enabling works</li>
+            <li>Ports, railheads, logistics hubs (as applicable)</li>
+            <li>Decision support for investment prioritisation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="sectionTitle">
+        <h2>Areas of expertise</h2>
+        <p>What CS LinkPoint brings to the table.</p>
+      </div>
+      <div class="tiles">
+        <div class="tile">
+          <h3>Infrastructure planning & development</h3>
+          <ul>
+            <li>Scope definition and technical option comparisons</li>
+            <li>Cost/schedule drivers and delivery constraints</li>
+            <li>Governance and decision‑ready documentation</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <h3>NATO common funding</h3>
+          <ul>
+            <li>NSIP process guidance and submission readiness</li>
+            <li>Eligibility criteria interpretation and alignment</li>
+            <li>Nation/committee Q&A preparation</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <h3>Fuel pipelines, depots & logistics</h3>
+          <ul>
+            <li>Pipeline and storage facility capability roadmaps</li>
+            <li>Emergency repair / recovery concepts</li>
+            <li>Interfaces with airports, bases, and civilian supply chains</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="sectionTitle">
+        <h2>How we work</h2>
+        <p>A pragmatic, decision‑oriented approach.</p>
+      </div>
+      <div class="process" aria-label="Process">
+        <div class="step"><strong>1) Diagnose</strong><span>Understand need, stakeholders, constraints, and intended funding route.</span></div>
+        <div class="step"><strong>2) Shape</strong><span>Refine scope & technical solution; test eligibility and compliance early.</span></div>
+        <div class="step"><strong>3) Package</strong><span>Produce decision‑ready narrative: risks, costs, schedule, and benefits.</span></div>
+        <div class="step"><strong>4) Support</strong><span>Coach teams for briefings, committee Q&A, and industry coordination.</span></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="sectionTitle">
+        <h2>About CS LinkPoint</h2>
+        <p>Experience where NATO meets real infrastructure.</p>
+      </div>
+      <div class="about">
+        <div class="tile">
+          <h3>Company</h3>
+          <p class="muted">
+            CS LinkPoint is a privately held consultancy based in Cascais, Portugal, serving clients across Europe.
+            The firm focuses on defence and dual‑use infrastructure, helping clients translate NATO policy and
+            funding frameworks into successful projects.
+          </p>
+          <div class="badgeRow">
+            <span class="badge">Founded 2025</span>
+            <span class="badge">Military & international affairs</span>
+            <span class="badge">2–10 employees</span>
+          </div>
+        </div>
+        <div class="tile">
+          <h3>Founder</h3>
+          <p class="muted">
+            Led by its founder, a former NATO official with 25 years of hands‑on experience — including 12 years
+            in NATO HQ infrastructure investment work and 13 years as Plans & Policy Officer of the CEPS Programme Office
+            (the Central Europe Pipeline System).
+          </p>
+          <p class="muted" style="margin-bottom:0">
+            LinkedIn: <a href="https://www.linkedin.com/company/cs-linkpoint/" target="_blank" rel="noopener">CS LinkPoint</a>
+            · <a href="https://www.linkedin.com/in/carlos-paixao-soares-17951311" target="_blank" rel="noopener">Carlos Paixão Soares</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="sectionTitle">
+        <h2>Contact</h2>
+        <p>Tell us what you’re working on — we’ll suggest the fastest useful next step.</p>
+      </div>
+      <div class="tiles">
+        <div class="tile">
+          <h3>Get in touch</h3>
+          <p class="muted">
+            <strong>Location:</strong> Cascais, Portugal<br/>
+            <strong>Focus:</strong> NATO common funding • fuel pipelines & storage • airfields
+          </p>
+          <p class="small">
+            Replace the placeholders below with your preferred email/phone once you decide what you want to publish.
+          </p>
+          <p class="muted" style="margin:0">
+            Email: <a href="mailto:contact@cslinkpoint.com">contact@cslinkpoint.com</a><br/>
+            Phone: <em>available upon request</em>
+          </p>
+        </div>
+
+        <div class="tile">
+          <h3>Send a message</h3>
+          <p class="small" style="margin-top:-2px">
+            This form uses <em>mailto</em> (opens your email app). If you prefer, we can convert it to a hosted form (Formspree, Netlify, etc.).
+          </p>
+          <form id="mailForm">
+            <div class="row2">
+              <label>
+                <span class="sr">Name</span>
+                <input name="name" placeholder="Your name" autocomplete="name" required />
+              </label>
+              <label>
+                <span class="sr">Email</span>
+                <input name="email" placeholder="Your email" autocomplete="email" required />
+              </label>
+            </div>
+            <label>
+              <span class="sr">Subject</span>
+              <input name="subject" placeholder="Subject" required />
+            </label>
+            <label>
+              <span class="sr">Message</span>
+              <textarea name="message" placeholder="Message" required></textarea>
+            </label>
+            <button class="btn" type="submit">Open email draft</button>
+            <div class="small">By sending, you agree to be contacted about your enquiry.</div>
+          </form>
+        </div>
+
+        <div class="tile">
+          <h3>What to include</h3>
+          <ul>
+            <li>Country / organisation and stakeholders involved</li>
+            <li>Infrastructure type (pipeline, depot, airfield, etc.)</li>
+            <li>Objective (resilience, expansion, repair capability, compliance)</li>
+            <li>Target timeline and decision milestones</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">
+        © <span id="year"></span> CS LinkPoint · All rights reserved · <a href="#top">Back to top</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Mailto form helper
+    const form = document.getElementById('mailForm');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = data.get('name');
+      const email = data.get('email');
+      const subject = data.get('subject');
+      const message = data.get('message');
+
+      const to = 'contact@cslinkpoint.com'; // CHANGE ME if needed
+      const body =
+        `Name: ${name}%0D%0A` +
+        `Email: ${email}%0D%0A%0D%0A` +
+        `${message}`;
+
+      const href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${body}`;
+      window.location.href = href;
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
